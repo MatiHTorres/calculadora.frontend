@@ -12,72 +12,75 @@
 
 <body>
     <!-- Suma Retas Multiplicacion Division -->
-    <div class="contenedor">
+    <div class="contenedor col-10 col-sm-8 col-md-6 col-lg-4">
         <div class="calculadora">
             <div>
-                <input id="pantalla" type="text" value="">
+                <input id="pantalla" class="display" type="text" value="">
             </div>
             <div class="row" id="div">
                 <div class="col-3">
-                    <button class="clear">C</button>
+                    <button class="clear" id="borrarUno">&larr;</button>
                 </div>
                 <div class="col-3">
-                    <button class="clear">AC</button>
+                    <button class="clear" id="borrarDos" >C</button>
+                </div>
+                <div class="col-3">
+                    <button class="clear" id="borrarTodo">AC</button>
                 </div>
                 <div class="col-3">
                     <button class="operadores">/</button>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-3">
-                    <button class="operadores">X</button>
+                    <button class="numeros" id="7">7</button>
+                </div>
+                <div class="col-3">
+                    <button class="numeros" id="8">8</button>
+                </div>
+                <div class="col-3">
+                    <button class="numeros" id="9">9</button>
+                </div>
+                <div class="col-3">
+                    <button class="operadores">*</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <button class="numeros">7</button>
+                    <button class="numeros" id="4">4</button>
                 </div>
                 <div class="col-3">
-                    <button class="numeros">8</button>
+                    <button class="numeros" id="5">5</button>
                 </div>
                 <div class="col-3">
-                    <button class="numeros">9</button>
+                    <button class="numeros" id="6">6</button>
                 </div>
                 <div class="col-3">
-                    <button class="operadores">-</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <button class="numeros">4</button>
-                </div>
-                <div class="col-3">
-                    <button class="numeros">5</button>
-                </div>
-                <div class="col-3">
-                    <button class="numeros">6</button>
-                </div>
-                <div class="col-3">
-                    <button class="operadores" >+</button>
+                    <button class="operadores" >-</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <button class="numeros">1</button>
+                    <button class="numeros" id="1">1</button>
                 </div>
                 <div class="col-3">
-                    <button class="numeros">2</button>
+                    <button class="numeros" id="2">2</button>
                 </div>
                 <div class="col-3">
-                    <button class="numeros">3</button>
+                    <button class="numeros" id="3">3</button>
+                </div>
+                <div class="col-3">
+                    <button class="operadores">+</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button class="numeros">0</button>
                 </div>
                 <div class="col-3">
                     <button class="operadores">.</button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <button class="numeros">0</button>
-                </div>
-                <div class="col-8">
+                <div class="col-3">
                     <button class="operadores">=</button>
                 </div>
             </div>
