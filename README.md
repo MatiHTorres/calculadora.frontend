@@ -3,7 +3,9 @@
 >### Esta aplicacion simula una calculadora con su estilo propio y funciones.
 
 > [!IMPORTANT]  
-> Puesto que el ejercicio pide que la pagina principal se llame calculadora.html, al realizar el deployement en GitHub pages esta no aparece, en cambio aparece el README, esto es por que GitHub busca un archivo index.html por defecto, como este no existe se muestra este README, agrega calculadora.html al final de la URL para visualizar el proyecto.
+> Puesto que el ejercicio pide que la pagina principal se llame calculadora.html, al realizar el deployment en GitHub pages esta no aparece, en cambio aparece el README, esto es por que GitHub busca un archivo index.html por defecto, como este no existe se muestra este README, agrega calculadora.html al final de la URL para visualizar el proyecto.
+
+## Link al proyecto [Calculadora Online](https://matihtorres.github.io/calculadora.frontend/calculadora.html) 
 
 Se solicita realizar las siguientes actividades:  
 
