@@ -6,7 +6,8 @@ $(function() {
     var resultado = '';
     var mensaje = '';
 
-    var displayPantalla = $('.display')
+    var displayPrimario = $('.displayPrincipal')
+    var displaySecundario = $('.displaySuperior')
 
     display();
 
@@ -52,22 +53,44 @@ $(function() {
             case '0':
                 agregarNumero('0');
                 break;
+            case 'division':
+                agregarOperador('/');
+                break;
+            case 'multiplicar':
+                agregarOperador('*');
+                break;
+            case 'restar':
+                agregarOperador('-');
+                break;
+            case 'sumar':
+                agregarOperador('+');
+                break;
+            case 'punto':
+                agregarPunto();
+            case 'igual':
+                calcular();
+
         }
         display();
 
     });
 
     function display() {
+        
         if (mensaje !== '') {
-            displayPantalla.val(mensaje);
+            displayPrimario.val(mensaje);
             mensaje = '';
         } else if (resultado !== '') {
-            displayPantalla.val(result);
+            displayPrimario.val(resultado);
         } else if (operador === '') {
-            displayPantalla.val(num1);
-        } else {
-            displayPantalla.val(num2);
+            displaySecundario.val('')
+            displayPrimario.val(num1);
+        } else {  
+            displaySecundario.val(num1 + ' ' + operador);
+            displayPrimario.val(num2);
         }
+
+        
     }
 
     function borrarUno() {
@@ -104,13 +127,15 @@ $(function() {
     }
 
     function agregarNumero(digito) {
-        if (result !== '') {
-            result = '';
+        if (resultado !== '') {
+            resultado = '';
         }
-        if (operator === '') {
+        if (operador === '') {
             num1 = nuevoNumero(num1, digito);
+            
         } else {
             num2 = nuevoNumero(num2, digito);
+            
         }
     }
 
@@ -119,6 +144,56 @@ $(function() {
             return digito;
         }
         return num + digito;
+    }
+
+    function agregarOperador(ope) {
+        if (resultado !== '') {
+            num1 = resultado;
+            resultado = '';
+        }
+        if (operador === '') {
+            operador = ope;
+        } else if (parseFloat(num2) === 0) {
+            operador = ope;
+        } else {
+            calcular();
+            agregarOperador(ope);
+        }
+    }
+
+    function agregarPunto() {
+        if (operador === '') {
+            num1 = numeroConPunto(num1);
+        } else {
+            num2 = numeroConPunto(num2);
+        }
+    }
+
+    function numeroConPunto(num) {
+        if (num.indexOf('.') === -1) {
+            return num + '.';
+        }
+        return num;
+    }
+
+    function calcular() {
+        if (num1 === '' || num2 === '' || operador === '') {
+            return;
+        }
+        if (operador === '/') {
+            dividir();
+        } else {
+            mostrarResultado(eval(num1 + operador + num2));
+        }
+    }
+
+    function dividir() {
+        if (parseFloat(num2) === 0) {
+            borrarTodo();
+            mensaje = 'Error al Dividir';
+            return;
+        }
+        mostrarResultado(eval(num1 + operador + num2));
     }
 
     function mostrarResultado(res) {

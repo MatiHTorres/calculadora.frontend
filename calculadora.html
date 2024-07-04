@@ -14,8 +14,9 @@
     <!-- Suma Retas Multiplicacion Division -->
     <div class="contenedor col-10 col-sm-8 col-md-6 col-lg-4">
         <div class="calculadora">
-            <div>
-                <input id="pantalla" class="display" type="text" value="">
+            <div class="display">
+                <input type="text" class="displaySuperior" readonly>
+                <input type="text" class="displayPrincipal" readonly>
             </div>
             <div class="row" id="div">
                 <div class="col-3">
@@ -28,7 +29,7 @@
                     <button class="clear" id="borrarTodo">AC</button>
                 </div>
                 <div class="col-3">
-                    <button class="operadores">/</button>
+                    <button class="operadores" id="division">/</button>
                 </div>
             </div>
             <div class="row">
@@ -42,7 +43,7 @@
                     <button class="numeros" id="9">9</button>
                 </div>
                 <div class="col-3">
-                    <button class="operadores">*</button>
+                    <button class="operadores" id="multiplicar">*</button>
                 </div>
             </div>
             <div class="row">
@@ -56,7 +57,7 @@
                     <button class="numeros" id="6">6</button>
                 </div>
                 <div class="col-3">
-                    <button class="operadores" >-</button>
+                    <button class="operadores" id="restar">-</button>
                 </div>
             </div>
             <div class="row">
@@ -70,18 +71,18 @@
                     <button class="numeros" id="3">3</button>
                 </div>
                 <div class="col-3">
-                    <button class="operadores">+</button>
+                    <button class="operadores" id="sumar">+</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <button class="numeros">0</button>
+                    <button class="numeros" id="0">0</button>
                 </div>
                 <div class="col-3">
-                    <button class="operadores">.</button>
+                    <button class="operadores" id="punto">.</button>
                 </div>
                 <div class="col-3">
-                    <button class="operadores">=</button>
+                    <button class="operadores" id="igual">=</button>
                 </div>
             </div>
         </div>
