@@ -21,7 +21,7 @@ utilice gráficamente la librería Bootstrap para la visualización de la calcul
 
 ### La calculadora realiza funciones de suma, resta, multiplicacion y division.
 
-### Se agrega el numerador y el operador y al clickear el boton de resultado, se despliega el resultado en la pantalla superior.
+### Se agrega el primer numerador, el operador y el segundo numerador, al clickear el boton de resultado, se despliega el resultado en la pantalla superior.
 
 ### Se estilizo el diseño con CSS para simular el de una calculadora real, lo hicimos responsivo con boostrap y se le aplico jQuery para poder realizas las funciones de la calculadora.  
 
@@ -43,5 +43,8 @@ HTML5
 CSS  
 JS  
 jQuery  
-Boostrap
+Bootstrap
+
+
+### Sprint final del modulo 2, Bootcamp Full Stack Java.
 
